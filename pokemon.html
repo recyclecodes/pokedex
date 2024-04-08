@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="pokemon.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@400;700&display=swap" rel="stylesheet">
+    <script defer src="pokemon.js"></script>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <img src="./assets/pokeball.svg" alt="pokeball" class="pokeballButton">
+            <h1 class="title">Pokedex</h1>
+        </div>
+        <div class="search-box">
+            <input id="searchbar" class="poke-search" type="text" name="search" placeholder="Search Pokemon...">
+        </div>
+    </div>
+
+    <!-- Main content container -->
+    <div class="container">
+        <!-- Pokemon list -->
+        <ul id="pokedex" class="pokedex"></ul>
+
+        <!-- Pagination -->
+        <div id="pagination" class="pagination"></div>
+    </div>
+
+    <!-- Loading indicator -->
+    <div id="loadingIndicator" class="loading-indicator">Loading...</div>
+
+    <!-- Modal for displaying Pokémon details and trivia -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span id="closeBtn" class="close">&times;</span>
+            <div class="pokemon-details">
+                <div class="details-container">
+                    <img id="modalImage" class="modal-image" src="" alt="Pokemon Image">
+                    <div id="modalDetails" class="modal-details">
+                        <h2 id="pokemonName"></h2>
+                        <div id="pokemonStats" class="stats">
+                            <p><strong>Attack:</strong> <span id="pokemonAtk"></span></p>
+                            <p><strong>Defense:</strong> <span id="pokemonDef"></span></p>
+                            <p><strong>HP:</strong> <span id="pokemonHP"></span></p>
+                            <p><strong>Speed:</strong> <span id="pokemonSpd"></span></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="trivia-container">
+                    <div id="modalTrivia" class="modal-trivia"></div>
+                </div>
+            </div>
+        </div>
+        <div id="modalBackground" class="modal-background"></div>
+    </div>
+</body>
+
+</html>
